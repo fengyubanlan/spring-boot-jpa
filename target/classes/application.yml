@@ -1,0 +1,19 @@
+server:
+    port: 8086
+spring:
+    #ͨ�õ�����Դ����
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        #driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo_test?useSSL=false&useUnicode=true
+              &characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: fengyubanlan
+    jpa:
+        #����������ڽ����ʱ�򣬽�Ĭ�ϵĴ洢�����л�Ϊ InnoDB �õ�
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        #��������־�д�ӡ��ִ�е� SQL �����Ϣ��
+        show-sql: true
+        hibernate:
+        #����ָ���ڳ���������ʱ��Ҫɾ�����Ҵ���ʵ�����Ӧ�ı�
+        ddl-auto: create
